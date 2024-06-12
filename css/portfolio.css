@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    background-color: #070707;
+    background-color: #fffdef;
 }
 
 .skip{
@@ -24,10 +24,16 @@ body {
     font-size: 1.5em;
     font-family: fantasy;
 }
+.home img {
+    max-width: 40px;
+    height: auto;
+    position: relative;
+}
+
 header {
     position: fixed;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.90);
+    /* background-color: rgb(255, 253, 239, 0.90); */
     /* border-bottom: 1px solid #2e2e2e; */
     padding: .5em;
     text-align: center;

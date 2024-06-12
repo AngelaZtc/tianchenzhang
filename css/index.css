@@ -111,6 +111,14 @@ p {
     flex-direction: row;
     z-index: -1;
 }
+.designer {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.designer.fade-in {
+    opacity: 1;
+}
 
 
 #about {
@@ -176,7 +184,13 @@ z-index: -1;
 }
 .contact a{
     color: #fffdef;
+    text-decoration: none;
 }
+.contact a:hover{
+    text-decoration: underline;
+
+}
+
 
 .work{
     top: 38vh;
