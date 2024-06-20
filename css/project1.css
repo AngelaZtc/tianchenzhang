@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #070707;
+}
+
+
+.skip{
+    position:absolute;
+    left: -1000px;
+    z-index: 1000;
+    font-family: "Gideon Roman", serif;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    }
+.skip:focus{
+    left: 10px;
+    }
+
+.home img {
+    max-width: 40px;
+    height: auto;
+    position: relative;
+    margin-top: 1.5em;
+}
+
+.home .logo {
+    transition: all 0.3s ease;
+}
+  
+.logo:hover {
+    transform: scale(1.1);
+  }
+header {
+    position: fixed;
+    width: 100%;
+    padding: .5em;
+    text-align: center;
+justify-content: center;
+z-index: 1000;
+}
+
+@media screen and (min-width: 600px) {
+
+    nav {
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1000;
+    margin-left: 60px;
+    }
+
+}
