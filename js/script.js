@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'slideIn 2s 3s forwards'; // 2s animation with 1s delay
+                entry.target.style.animation = 'slideIn 12s 2s forwards';
                 observer.unobserve(entry.target);
             }
         });
@@ -36,16 +36,30 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
-    var p1 = document.querySelector('.p1');
-    var box1 = document.querySelector('.box1');
+    var hoverPairs = [
+        { hoverElement: '.p1', boxElement: '.box1' },
+        { hoverElement: '.p2', boxElement: '.box2' },
+        { hoverElement: '.p3', boxElement: '.box3' },
+        { hoverElement: '.p4', boxElement: '.box4' }
+    ];
 
-    p1.addEventListener('mouseover', function() {
-        box1.style.display = 'block';
-    });
+    hoverPairs.forEach(function(pair) {
+        var hoverElement = document.querySelector(pair.hoverElement);
+        var boxElement = document.querySelector(pair.boxElement);
 
-    p1.addEventListener('mouseout', function() {
-        box1.style.display = 'none';
+        hoverElement.addEventListener('mouseover', function() {
+            boxElement.classList.add('show');
+        });
+
+        hoverElement.addEventListener('mouseout', function() {
+            boxElement.classList.remove('show');
+        });
     });
 });
+
 

@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #070707;
+
+}
+
+h2{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    color: #fffdef;
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+    margin-top: 2em;
+    z-index: 10001;
+}
+h2 a{
+    color: #fffdef;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+h2 a:hover{
+    color: #dfccb1;
+    font-weight: 500;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em;
+}
+.skip{
+    position:absolute;
+    left: -1000px;
+    z-index: 1000;
+    font-family: "Gideon Roman", serif;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    }
+.skip:focus{
+    left: 10px;
+    }
+
+.home img, .arrow img{
+    max-width: 40px;
+    height: auto;
+    position: relative;
+    /* margin-top: 1.5em; */
+    padding: 15px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+.arrow {
+    transition: all 0.3s ease;
+}
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.home .logo {
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+  }
+
+header {
+    position: fixed;
+    top: 20px;
+    width: 20%;
+    padding: .5em;
+    text-align: center;
+justify-content: center;
+}
+
+.images img {
+    max-width: 80%;
+    animation: grow 1.5s ease;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  
+}
+@keyframes grow {
+    0% { transform: scale(.2); }
+  100% { transform: scale(1); }
+}
+
+
+  .images img.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+.arrow2 img {
+    max-width: 40px;
+    right: 20px;
+    bottom: 20px;
+    margin-top: 1.5em;
+    padding: 15px;}
+
+
+.arrow2 {
+    opacity: 0;
+    right: 20px;
+    bottom: 20px;
+    height: auto;
+    position:fixed;
+    margin-top: 1.5em;
+    padding: 15px;
+    transition: all 0.5s ease;
+  }
+
+  .arrow2.show {
+    opacity: 1;
+  }
+
+.arrow2:hover {
+    transform: scale(1.2);
+
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+    nav {
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1000;
+    margin-left: 60px;
+    }
+
+}
+
