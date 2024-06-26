@@ -31,4 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// enlarge images
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.images img');
 
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            if (this.classList.contains('enlarged')) {
+                this.classList.remove('enlarged');
+            } else {
+                // Remove 'enlarged' class from any other image
+                images.forEach(img => img.classList.remove('enlarged'));
+                this.classList.add('enlarged');
+            }
+        });
+    });
+});

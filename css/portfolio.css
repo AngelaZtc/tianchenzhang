@@ -27,11 +27,14 @@ body {
     left: 10px;
     }
 
-/* .home{
-    color: #fffdef;
-    font-size: 1.5em;
-    font-family: fantasy;
-} */
+.home .logo {
+        transition: all 0.3s ease;
+    }
+
+.logo:hover {
+        transform: scale(1.1);
+      }
+
 .home img {
     max-width: 40px;
     height: auto;
@@ -42,12 +45,11 @@ body {
 header {
     position: fixed;
     width: 100%;
-    padding: .5em;
     text-align: center;
 justify-content: center;
 z-index: 1000;
 }
-.title1, .title2, .title3{
+.title1, .title2, .title3, .title4, .title5{
     font-family: "josefin sans", sans-serif;
     color: #dfccb1;
     font-size: 2.5em;
@@ -55,13 +57,12 @@ z-index: 1000;
     margin-top: 1em;
 }
 
-.p1, .p2, .p3{
+.p1, .p2, .p3, .p4, .p5{
     font-family: "josefin sans", sans-serif;
     font-weight: 300;
     color: #dfccb1;
     font-size: 1.5em;
     line-height: 1.5em;
-    margin: 50px 70px 0 50px;
     text-align: center;
     width: 80%;
 }
@@ -70,20 +71,91 @@ z-index: 1000;
     color: #000000;
 }
 .p3{
-    color: #F1E2C8;
+    color: #ffffff;
 
 }
+.p4{
+    color: #000000;
 
+}
 .title2{
     color: darkred;
 }
 .title3{
-    color: #F1E2C8;
+    color: #ffffff;
 
 }
 
-@media screen and (min-width: 600px) {
+nav {
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1000;
+    margin-left: 60px;
+    z-index: 1000;
+    }
 
+.images {
+text-align: center;
+    }
+
+.images img{
+    overflow: hidden;
+    position: relative;
+    top: 15vh;
+    width: 90%;
+     height: auto;
+     margin: 10px;
+     border-radius: 10px;
+     transition: all 0.3s ease;
+ }
+    .images img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgb(0, 0, 0,.5);  
+    }
+.arrow2 img {
+    max-width: 40px;
+    padding: 15px;}
+
+
+.arrow2 {
+    opacity: 0;
+    right: 10px;
+    bottom: 20px;
+    height: auto;
+    position:fixed;
+    margin-top: 1.5em;
+    padding: 15px;
+    transition: all 0.5s ease;
+  }
+
+  .arrow2.show {
+    opacity: 1;
+  }
+
+.arrow2:hover {
+    transform: scale(1.2);
+
+}
+.boxes{
+    display:none
+}
+
+  footer{
+    position: relative;
+    color: #000000;
+    font-size: .7em;
+    text-align: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5em;
+    margin: 0.5em;
+    top: 40vh;
+}
+
+/* desktop view */
+@media screen and (min-width: 920px) {
+    .boxes{
+        display:unset
+    }
 nav {
 display: flex;
 justify-content: flex-start;
@@ -137,6 +209,7 @@ h2{
 .images img{
    width: 480px;
     height: auto;
+    top: 5px;
     margin: 10px;
     text-align: right;
     margin-right: 10px;
@@ -156,7 +229,7 @@ h2{
     transform: scale(1.1);
   }
 
-  .box1, .box2, .box3 {
+  .box1, .box2, .box3, .box4 {
     opacity: 0;
     position: fixed;
     top: 0;
@@ -182,10 +255,20 @@ h2{
     background-size: cover;
   }
 .box3{
-    background: url("../assets/mauve.jpg");
+    background: url("../assets/Drips.gif");
     background-size: cover;
-
 }
+.box4{
+    background: url("../assets/tamarind.jpg");
+    background-size: cover;
+}
+
+
+.title4{
+color:black
+}
+
+
 .content{
     display: flex;
     justify-content: space-evenly;
@@ -193,7 +276,34 @@ h2{
     flex-direction:column;
     margin-top: 20vh;
 }
+.arrow2 img {
+    max-width: 40px;
+    right: 20px;
+    bottom: 20px;
+    margin-top: 1.5em;
+    padding: 15px;}
 
+
+.arrow2 {
+    opacity: 0;
+    left: 20px;
+    bottom: 20px;
+    height: auto;
+    position:fixed;
+    margin-top: 1.5em;
+    padding: 15px;
+    transition: all 0.5s ease;
+    ;
+  }
+
+.arrow2.show {
+    opacity: 1;
+  }
+
+.arrow2:hover {
+    transform: scale(1.2);
+
+}
   footer{
     position: relative;
     color: #000000;

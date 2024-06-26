@@ -19,23 +19,40 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 100);
 });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const separator = document.querySelectorAll('.separator1, separator2');
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.style.animation = 'slideIn 10s 3s forwards';
+//                 observer.unobserve(entry.target);
+//             }
+//         });
+//     }, {
+//         threshold: 0.1
+//     });
+
+//     observer.observe(separator);
+// });
+
 document.addEventListener("DOMContentLoaded", function() {
-    const separator = document.querySelector('.separator1, separator2');
+    const separators = document.querySelectorAll('.separator1, .separator2');
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'slideIn 12s 2s forwards';
+                entry.target.classList.add('show');
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.3
     });
 
-    observer.observe(separator);
+    separators.forEach(separator => {
+        observer.observe(separator);
+    });
 });
-
-
 
 
 
@@ -61,5 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
 
 
