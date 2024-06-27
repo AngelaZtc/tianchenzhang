@@ -301,11 +301,11 @@ nav {
 .separator1.show {
     transition-delay: 5s;
   }
-  
+
   .separator2.show {
-    transition-delay: 5.5s;
+    transition-delay: 5.2s;
   }
-/*     
+/*
     @keyframes slideIn {
         from {
             width: 0;
