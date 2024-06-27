@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 // enlarge images
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('.images img');

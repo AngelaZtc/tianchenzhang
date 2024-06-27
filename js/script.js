@@ -19,21 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 100);
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const separator = document.querySelectorAll('.separator1, separator2');
-//     const observer = new IntersectionObserver((entries, observer) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.style.animation = 'slideIn 10s 3s forwards';
-//                 observer.unobserve(entry.target);
-//             }
-//         });
-//     }, {
-//         threshold: 0.1
-//     });
-
-//     observer.observe(separator);
-// });
 
 document.addEventListener("DOMContentLoaded", function() {
     const separators = document.querySelectorAll('.separator1, .separator2');
@@ -62,7 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
         { hoverElement: '.p1', boxElement: '.box1' },
         { hoverElement: '.p2', boxElement: '.box2' },
         { hoverElement: '.p3', boxElement: '.box3' },
-        { hoverElement: '.p4', boxElement: '.box4' }
+        { hoverElement: '.p4', boxElement: '.box4' },
+        { hoverElement: '.p5', boxElement: '.box5' },
+        { hoverElement: '.p6', boxElement: '.box6' },
+        { hoverElement: '.p7', boxElement: '.box7' },
+        { hoverElement: '.p8', boxElement: '.box8' },
     ];
 
     hoverPairs.forEach(function(pair) {
