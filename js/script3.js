@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
     var images = document.querySelectorAll('.images img');
 
