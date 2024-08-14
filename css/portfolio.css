@@ -64,7 +64,7 @@ z-index: 1000;
     font-size: 1.5em;
     line-height: 1.5em;
     text-align: center;
-    width: 75%;
+    width: 65%;
 }
 
 .p2, .p4, .p5, .p6{
@@ -75,7 +75,7 @@ z-index: 1000;
 
 }
 .p7{
-    color: #e17127;
+    color: #082d0b;
 
 }
 .title2{
@@ -89,7 +89,7 @@ z-index: 1000;
     color: #000000;
 }
 .title7{
-    color: #e17127;
+    color: #082d0b;
 }
 
 nav {
@@ -118,30 +118,33 @@ text-align: center;
         transform: scale(1.05);
         box-shadow: 0 0 10px rgb(0, 0, 0,.5);  
     }
+
 .arrow2 img {
     max-width: 40px;
     padding: 15px;}
 
 
-.arrow2 {
-    opacity: 0;
-    right: 10px;
-    bottom: 20px;
-    height: auto;
-    position:fixed;
-    margin-top: 1.5em;
-    padding: 15px;
-    transition: all 0.5s ease;
-  }
+    .arrow2 {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform-origin: center center;
+      }
+      
+      .arrow2.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .arrow2 img:hover {
+        transform:scale(1.2);
+        transition: all 0.3s ease-in-out;
 
-  .arrow2.show {
-    opacity: 1;
-  }
+      }
+      
 
-.arrow2:hover {
-    transform: scale(1.2);
-
-}
 .boxes{
     display:none
 }
@@ -273,12 +276,12 @@ h2{
     background-size: cover;
 }
 .box6{
-    background: url("../assets/honey.gif");
+    background: url("../assets/honey.jpg");
     background-size: cover;
 
 }
 .box7{
-    background: url("../assets/jazz1.png");
+    background: url("../assets/jazz.jpg");
     background-size:cover;
 
 }
@@ -308,17 +311,9 @@ h2{
     margin-top: 1.5em;
     padding: 15px;
     transition: all 0.5s ease;
-    ;
   }
 
-.arrow2.show {
-    opacity: 1;
-  }
 
-.arrow2:hover {
-    transform: scale(1.2);
-
-}
   footer{
     position: relative;
     color: #000000;
